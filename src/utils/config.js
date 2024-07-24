@@ -1,0 +1,2 @@
+export const API_URL = "https://api.themoviedb.org/3/movie/popular";
+export const API_TOKEN = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNzBkYmY1YzE5OTU4NWQxMjBjZWY2ZTAwZjZlOTUxOCIsInN1YiI6IjY2MWY3MmJjOTY2NzBlMDE2M2Q5NTE2ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Xgj9odydMVl6ilsPiczfHmY7efBWZyxt3bpGNrmhetE";
