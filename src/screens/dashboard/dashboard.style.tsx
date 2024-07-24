@@ -1,12 +1,13 @@
 import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 
-const width = (Dimensions.get('window').width - 30) / 2;
+const width = (Dimensions.get('window').width - 20) / 2;
 
 export const ItemContainer = styled.View`
   margin: 5px;
   backgound-color: black;
   width: ${width}px;
+  padding : 5px
 `;
 
 export const HeaderContainer = styled.View`
@@ -28,7 +29,7 @@ export const HeaderText = styled.Text`
 
 export const Container = styled.View`
   padding: 5px;
-  background-color: gray;
+  background-color: white;
 `;
 
 export const Thumbnail = styled.Image`
@@ -37,7 +38,7 @@ export const Thumbnail = styled.Image`
 `;
 
 export const TitleText = styled.Text`
-  color: white;
+  color: black;
   font-size: 18px;
   font-weight: 500;
 `;
