@@ -36,13 +36,10 @@ const DashboardScreen: React.FC<Props> = ({ navigation }) => {
   const dispatch = useAppDispatch();
   const { data } = useSelector((state: any) => state.movies);
   useEffect(() => {
-    loadInitData();
     console.log("DATA::", data);
+    dispatch(fetchData(1));
   }, []);
 
-  const loadInitData = () => {
-    dispatch(fetchData(1));
-  };
   const logoutUser = () => {
     dispatch(setUser({ email: '', password: '' }));
     navigation.reset({
