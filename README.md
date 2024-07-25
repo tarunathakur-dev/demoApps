@@ -30,14 +30,16 @@ Once you get the application running, below are the steps to be followed
  3. User can logout from the application by clicking on logout icon from the top of this screen.
 
  
-
-![Login_en](https://github.com/user-attachments/assets/3f18fecf-5a2d-4a1b-973b-d9e6a33abbc0)
-
-      
-
      
 
 
+![Logout_en](https://github.com/user-attachments/assets/114623f2-fe5a-48cb-9931-497998ce0fd9)
+![Logout_ar](https://github.com/user-attachments/assets/d0c9242c-81c4-4fcb-95eb-923396066252)
+![Login_en](https://github.com/user-attachments/assets/b7905d5e-4e06-4c49-a16a-012c1dcee4a4)
+![Login_ar](https://github.com/user-attachments/assets/5dc7cae7-2ee6-4a19-ae4a-09858b2f122e)
+![Dashboard](https://github.com/user-attachments/assets/884299b5-c9ad-421e-b57a-febe08e347f6)
+![Dashboard_en](https://github.com/user-attachments/assets/f80dcb7d-d395-4882-92a1-bc346599fbf7)
+![Dashboard_ar](https://github.com/user-attachments/assets/7aa5f598-a82c-45a4-a585-13348e1dfe8d)
 
 
    
