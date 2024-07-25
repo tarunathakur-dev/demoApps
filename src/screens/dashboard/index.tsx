@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Alert, FlatList, SafeAreaView, TouchableOpacity } from 'react-native';
+import React, {useEffect} from 'react';
+import {useTranslation} from 'react-i18next';
+import {Alert, FlatList, SafeAreaView, TouchableOpacity} from 'react-native';
 import 'react-native-gesture-handler';
 import {
   Container,
@@ -9,15 +9,13 @@ import {
   ItemContainer,
   Thumbnail,
   TitleText,
-  ImageContainer
+  ImageContainer,
 } from './dashboard.style';
-import { useAppDispatch } from '../../redux/store';
-import { useSelector } from 'react-redux';
-import { fetchData } from '../../redux/movieReducer';
-import { setUser } from '../../redux/userProfile';
-import { SCREEN_NAMES } from '../../route/rootStack';
-import Button from '../../generic/buttonField';
-
+import {useAppDispatch} from '../../redux/store';
+import {useSelector} from 'react-redux';
+import {fetchData} from '../../redux/movieReducer';
+import {setUser} from '../../redux/userProfile';
+import {SCREEN_NAMES} from '../../route/rootStack';
 interface Props {
   navigation: any;
 }
@@ -31,20 +29,19 @@ interface ArticleItemType {
   index: number;
 }
 
-const DashboardScreen: React.FC<Props> = ({ navigation }) => {
-  const { t } = useTranslation();
+const DashboardScreen: React.FC<Props> = ({navigation}) => {
+  const {t} = useTranslation();
   const dispatch = useAppDispatch();
-  const { data } = useSelector((state: any) => state.movies);
+  const {data} = useSelector((state: any) => state.movies);
   useEffect(() => {
-    console.log("DATA::", data);
     dispatch(fetchData(1));
   }, []);
 
   const logoutUser = () => {
-    dispatch(setUser({ email: '', password: '' }));
+    dispatch(setUser({email: '', password: ''}));
     navigation.reset({
       index: 0,
-      routes: [{ name: SCREEN_NAMES.LOGIN }],
+      routes: [{name: SCREEN_NAMES.LOGIN}],
     });
   };
 
@@ -55,11 +52,12 @@ const DashboardScreen: React.FC<Props> = ({ navigation }) => {
     }
   };
 
-
-  const renderListItem = ({ item }: ArticleItemType) => {
+  const renderListItem = ({item}: ArticleItemType) => {
     return (
       <ItemContainer>
-        <Thumbnail source={{ uri: `https://image.tmdb.org/t/p/w500` }} />
+        <Thumbnail
+          source={{uri: `https://image.tmdb.org/t/p/w500/${item?.poster_path}`}}
+        />
         <TitleText numberOfLines={1}>{item.title}</TitleText>
       </ItemContainer>
     );
@@ -70,13 +68,13 @@ const DashboardScreen: React.FC<Props> = ({ navigation }) => {
       t('logout'),
       t('areYouSure'),
       [
-        { text: t('no'), style: 'cancel' },
+        {text: t('no'), style: 'cancel'},
         {
           text: t('yes'),
           onPress: logoutUser,
         },
       ],
-      { cancelable: false },
+      {cancelable: false},
     );
   };
 
